@@ -131,8 +131,17 @@ with open(output_md_path, mode='w', encoding='utf-8') as mdfile, \
             processed_color = color_mapping.get(row['color'], 'unknown')
             processed_type = type_mapping.get(row['type'], 'unknown')
             
+            
+            original_text = row['text']
+            original_comment = row['comment']
+            
+            # 处理text列，否则md文件中的表格会出现换行中止问题
+            processed_text = original_text.replace('\n', '<br>')
+            # 处理comment列，否则md文件中的表格会出现换行中止问题
+            processed_comment = original_comment.replace('\n', '<br>')
+            
             # 写入Markdown文件
-            mdfile.write(f"| <font color={original_color}>**{processed_color}**</font> | {row['text']} | {row['comment']} | {row['pagelabel']} | **{processed_type}** |\n")
+            mdfile.write(f"| <font color={original_color}>**{processed_color}**</font> | {processed_text} | {processed_comment} | {row['pagelabel']} | **{processed_type}** |\n")
             
             # 写入新的CSV文件，注意这里不需要HTML标签
             csv_writer.writerow([processed_color, row['text'], row['comment'], row['pagelabel'], processed_type])
