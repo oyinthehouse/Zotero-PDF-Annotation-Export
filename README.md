@@ -10,4 +10,5 @@
 4. **关闭Zotero**，否则我们无权访问sqlite。运行zotero_annotation_output.py，并到对应路径查看结果。会生成两个csv（sqlite导出后、二次修改后）和一个markdown文件。
 5. **打开Zotero，手动删除此前注释的keyword**
 ## 注
-技术支持by Kimi.ai
+- 技术支持by Kimi.ai
+- 我不太（懂）用GitHub和编程，所以如果您想优化程序的话，可以自行修改并发布，不需要pull（这个词应该是这么用的吧？）到这个仓库里。谢谢！
