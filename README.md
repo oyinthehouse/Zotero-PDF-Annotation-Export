@@ -9,7 +9,7 @@
 2. 修改代码里的“文件路径”部分的路径，其中Sqlite位置见[Zotero官方文档](https://www.zotero.org/support/dev/client_coding/direct_sqlite_database_access)。
 3. 请在Zotero里对需要导出的pdf文件里任意位置打上注释(Add Note)"outputanno"（也可在Python里自定义keyword）。若多个文件都被注释，它们的批注将会被导出至同一个Markdown的不同表格里。
 4. **关闭Zotero**，否则我们无权访问sqlite。运行zotero_annotation_output.py，并到对应路径查看结果。会生成两个csv（SQLite导出后、二次修改后）和一个Markdown文件。
-5. **打开Zotero，手动删除此前注释的keyword**
+5. **记得在Zotero删除此前注释的keyword**，否则会把对应的pdf带到下次导出。
 ## 注
 - 技术支持by Kimi.ai
 - 我不太（懂）用GitHub和编程，所以如果您想优化程序的话，可以自行修改并发布，不需要pull（这个词应该是这么用的吧？）到这个仓库里。谢谢！
