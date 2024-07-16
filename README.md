@@ -3,7 +3,7 @@
 - 这是一个将Zotero的pdf批注、高亮导出为Markdown与CSV的程序。采用的是笨办法，不能完全实现自动化。  
 - 程序将访问Zotero本地的SQLite数据库（不会执行任何写操作），搜索我们人为添加的特定关键词注释，找到对应的item，导出至CSV，并进一步修改。在最后的Markdown文件里，保留了Color, Text, Comment, Page, Type五类元素，并给Color列的元素添加了对应颜色。并且，注释按照页面位置顺序升序排列。
 - 您也可以将任意含有注释的pdf文件导入到Zotero，再用这个程序处理，实现“pdf注释导出”的功能（这其实才是我的动机）。
-- 示例见example文件夹。
+- 示例见example文件夹。我的版本是Zotero 6。
 ## 操作步骤
 1. 下载zotero_annotation_export.py。
 2. 修改代码里的“文件路径”部分的路径，其中Sqlite位置见[Zotero官方文档](https://www.zotero.org/support/dev/client_coding/direct_sqlite_database_access)。
